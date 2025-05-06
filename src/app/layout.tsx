@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { spaceGrotesk, rwDewiAlt } from "./ui/fonts";
 import "./ui/globals.css";
+import { Header } from "./(widgets)";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -15,8 +16,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${spaceGrotesk.variable} ${rwDewiAlt.variable} antialiased min-h-dvh flex flex-col`}
+        className={`${spaceGrotesk.className} ${rwDewiAlt.variable} antialiased min-h-dvh flex flex-col`}
       >
+        <Header />
         <main className="flex-1">{children}</main>
       </body>
     </html>
