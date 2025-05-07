@@ -1,10 +1,9 @@
-
 import Link from "next/link";
 import React from "react";
 
-export const BrandLogo = () => {
+export const FullLogo = () => {
   return (
-    <Link href='/'>
+    <Link href="/">
       <svg
         width="158"
         height="25"

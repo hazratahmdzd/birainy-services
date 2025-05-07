@@ -1,9 +1,10 @@
-import React from 'react'
+import { Head, Services } from "./sections_";
 
 export const ServicesPage = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <>
+      <Head />
+      <Services />
+    </>
+  );
+};

@@ -1,5 +1,4 @@
 import React from "react";
-import { BrandLogo } from "./brand-logo";
 import Link from "next/link";
 import {
   IconBrandInstagram,
@@ -10,11 +9,12 @@ import { Button } from "@/components/ui/button";
 import { LanguageSelect } from "@/components";
 import { HeaderDrawer } from "./header-drawer";
 import { MENU_DATA } from "@/config/constants";
+import { FullLogo } from "@/components";
 
 export const Header = () => {
   return (
     <header className="container-center pt-4 lg:pt-8 flex items-center max-lg:justify-between gap-8">
-      <BrandLogo />
+      <FullLogo />
       <div className="w-full px-7 py-3.5 max-lg:hidden bg-brand-bg rounded-2xl text-base font-(family:) flex items-center gap-4 justify-between">
         <div className="flex items-center gap-4 xl:gap-7">
           {MENU_DATA.map((item, index) => (
