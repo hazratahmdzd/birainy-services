@@ -1,0 +1,49 @@
+import React from "react";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../ui/accordion";
+import Link from "next/link";
+import { SERVICES_DATA } from "@/config/constants";
+
+export const ServiceAccordion = () => {
+  return (
+    <Accordion
+      type="single"
+      collapsible
+      className="w-full lg:w-[35%] flex flex-col gap-3"
+    >
+      {SERVICES_DATA.map((item, index) => {
+        return item.childrens ? (
+          <AccordionItem
+            key={index}
+            value={`item-${index}`}
+            className="bg-brand-bg border border-transparent rounded-[12px] hover:border-brand transition-colors"
+          >
+            <AccordionTrigger className="px-8 py-6 text-xl xl:text-2xl text-brand-foreground cursor-pointer">
+              <Link href={item.path}>{item.title}</Link>
+            </AccordionTrigger>
+            <AccordionContent className="px-8 py-6 text-xl xl:text-2xl text-brand-foreground">
+              <div className="flex flex-col gap-4">
+                {item.childrens.map((childItem, childIndex) => (
+                  <Link key={childIndex} href={childItem.path} className="text-brand-foreground/50">
+                    {childItem.title}
+                  </Link>
+                ))}
+              </div>
+            </AccordionContent>
+          </AccordionItem>
+        ) : (
+          <div
+            key={index}
+            className="bg-brand-bg px-8 py-6 border border-transparent rounded-[12px] hover:border-brand transition-colors cursor-pointer"
+          >
+            <Link href={item.path} className="text-xl xl:text-2xl font-semibold text-brand-foreground transition-all">{item.title}</Link>
+          </div>
+        );
+      })}
+    </Accordion>
+  );
+};
