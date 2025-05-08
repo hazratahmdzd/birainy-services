@@ -1,10 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import {
-  IconBrandInstagram,
-  IconBrandLinkedin,
-  IconBrandTiktok,
-} from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 import { LanguageSelect } from "@/components";
 import { HeaderDrawer } from "./header-drawer";

@@ -1,4 +1,4 @@
-import { Space_Grotesk, Inter, Orbitron } from "next/font/google";
+import { Space_Grotesk, Inter } from "next/font/google";
 
 export const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
