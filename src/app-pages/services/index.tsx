@@ -3,7 +3,7 @@ import { Head } from "./sections_";
 import dynamic from "next/dynamic";
 
 const Services = dynamic(() => import("./sections_/services/index"), {
-  ssr: false,
+  ssr: true,
 });
 
 export const ServicesPage = () => {
