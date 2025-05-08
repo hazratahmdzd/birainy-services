@@ -8,7 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { LanguageSelect } from "@/components";
 import { HeaderDrawer } from "./header-drawer";
-import { MENU_DATA } from "@/config/constants";
+import { MENU_DATA, SOCIAL_MEDIA_DATA } from "@/config/constants";
 import { FullLogo } from "@/components";
 
 export const Header = () => {
@@ -29,17 +29,19 @@ export const Header = () => {
         </div>
         <div className="flex items-center gap-7">
           <div className="flex gap-6 items-center max-xl:hidden">
-            <IconBrandInstagram
-              size={26}
-              color="var(--color-brand-foreground)"
-            />
-            <div className="min-w-[1px] w-[1px] min-h-6 h-full bg-brand-foreground"></div>
-            <IconBrandLinkedin
-              size={26}
-              color="var(--color-brand-foreground)"
-            />
-            <div className="min-w-[1px] w-[1px] min-h-6 h-full bg-brand-foreground"></div>
-            <IconBrandTiktok size={26} color="var(--color-brand-foreground)" />
+            {SOCIAL_MEDIA_DATA.map(({ icon: Icon, link }, index) => (
+              <div key={index} className="flex gap-6 items-center">
+                <Link href={link} target="_blank">
+                  <Icon
+                    size={26}
+                    color="var(--color-brand-foreground)"
+                  />
+                </Link>
+                {index !== SOCIAL_MEDIA_DATA.length - 1 && (
+                  <div className="min-w-[1px] w-[1px] min-h-6 h-full bg-brand-foreground"></div>
+                )}
+              </div>
+            ))}
           </div>
           <div className="flex gap-3">
             <Button variant="primary" className="text-base">

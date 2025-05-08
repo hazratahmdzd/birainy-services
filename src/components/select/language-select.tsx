@@ -15,7 +15,7 @@ export function LanguageSelect() {
   return (
     <Select>
       <SelectTrigger className="p-0" asChild>
-        <Button variant="outline" size='default' className="!bg-[#e0dfdf]">
+        <Button aria-label="language-select" variant="outline" size='default' className="!bg-[#e0dfdf]">
           <IconWorld size={20} color="var(--color-brand-foreground)" className="!w-6 !h-6" />
         </Button>
       </SelectTrigger>

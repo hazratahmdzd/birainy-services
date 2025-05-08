@@ -1,6 +1,17 @@
-import { MenuItemProps, ServiceDataProps } from "@/types/data";
+import {
+  AddressDataProps,
+  ContactDetailsProps,
+  MenuItemProps,
+  ServiceDataProps,
+  SocialMediaDataProps,
+} from "@/types/data";
 import CreatingWebsite from "@/components/contentChildren/creating-website";
 import { CreatingWebsiteDataProps } from "@/types/components";
+import {
+  IconBrandInstagram,
+  IconBrandLinkedin,
+  IconBrandTiktok,
+} from "@tabler/icons-react";
 
 export const MENU_DATA: MenuItemProps[] = [
   {
@@ -22,6 +33,51 @@ export const MENU_DATA: MenuItemProps[] = [
   {
     title: "Biz kimik?",
     link: "/",
+  },
+];
+
+export const SOCIAL_MEDIA_DATA: SocialMediaDataProps[] = [
+  {
+    link: "https://www.instagram.com/birainy_az/",
+    icon: IconBrandInstagram,
+  },
+  {
+    link: "https://www.linkedin.com/company/birainy/",
+    icon: IconBrandLinkedin,
+  },
+  {
+    link: "https://www.tiktok.com/@birainy",
+    icon: IconBrandTiktok,
+  },
+];
+
+export const ADDRESS_DATA: AddressDataProps[] = [
+  {
+    title: "Azərbaycan",
+    description: "Azure Business Center 8 Noyabr, 15 Bakı, Azərbaycan AZ1010",
+  },
+  {
+    title: "Kanada",
+    description: "Edmonton, Alberta",
+  },
+  {
+    title: "Gürcüstan",
+    description: "Tbilisi, Gürcüstan",
+  },
+];
+
+export const CONTACT_DETAILS_DATA: ContactDetailsProps[] = [
+  {
+    title: "+994 12 488 66 54",
+    href: "tel:+994124886654",
+  },
+  {
+    title: "+994 77 613 13 17",
+    href: "tel:+994776131317",
+  },
+  {
+    title: "info@birainy.com",
+    href: "mailto:info@birainy.com",
   },
 ];
 
@@ -80,7 +136,7 @@ export const SERVICES_DATA: ServiceDataProps[] = [
   {
     id: "2",
     title: "Saytların yaradılması",
-    path: "/services?id=2&tab=1",
+    path: "/services?id=2",
     details: {
       title: "Saytların yaradılması",
       description:
@@ -280,7 +336,6 @@ export const SERVICES_DATA: ServiceDataProps[] = [
   },
 ];
 
-
 export const CREATING_WEBSITE_DATA: CreatingWebsiteDataProps[] = [
   {
     title: "UI/UX dizayn",
@@ -290,8 +345,7 @@ export const CREATING_WEBSITE_DATA: CreatingWebsiteDataProps[] = [
   },
   {
     title: "Mobil Optimizasiya",
-    description:
-      "Vebsaytın müxtəlif ölçülü mobil cihazlara uyğunlaşdırılması.",
+    description: "Vebsaytın müxtəlif ölçülü mobil cihazlara uyğunlaşdırılması.",
     image: "/webp/optimization.webp",
   },
   {
@@ -318,4 +372,4 @@ export const CREATING_WEBSITE_DATA: CreatingWebsiteDataProps[] = [
       "Saytların keywordlərə uyğun axtarış sistemlərində ilk sıralarda görünməsini təmin etmək.",
     image: "/webp/seo.webp",
   },
-]
+];

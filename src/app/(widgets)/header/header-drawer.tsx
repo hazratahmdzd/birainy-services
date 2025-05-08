@@ -24,7 +24,7 @@ export function HeaderDrawer() {
   return (
     <Drawer direction="right">
       <DrawerTrigger asChild>
-        <Button variant="primary" size="icon">
+        <Button aria-label="burger-menu" variant="primary" size="icon">
           <IconMenu2 size={20} className="!w-6 !h-6" />
         </Button>
       </DrawerTrigger>

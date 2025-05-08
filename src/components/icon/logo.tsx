@@ -3,7 +3,7 @@ import React from "react";
 
 export const FullLogo = () => {
   return (
-    <Link href="/">
+    <Link aria-label="logo" href="/">
       <svg
         width="158"
         height="25"
@@ -48,6 +48,7 @@ export const FullLogo = () => {
           fill="black"
         ></path>
       </svg>
+      
     </Link>
   );
 };
