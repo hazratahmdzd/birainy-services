@@ -1,3 +1,4 @@
+'use client';
 import { Head } from "./sections_";
 import dynamic from "next/dynamic";
 
