@@ -1,6 +1,5 @@
 import React, { FC } from "react";
 import { ServiceAccordion, ServiceContent } from "@/components";
-import { useSearchParams } from "next/navigation";
 import { SERVICES_DATA } from "@/config/constants";
 
 interface ServiceSectionProps {
