@@ -1,13 +1,14 @@
-"use client";
-import React from "react";
+import React, { FC } from "react";
 import { ServiceAccordion, ServiceContent } from "@/components";
 import { useSearchParams } from "next/navigation";
 import { SERVICES_DATA } from "@/config/constants";
 
-const Services = () => {
-  const searchParams = useSearchParams();
-  const id = searchParams.get("id");
-  const tab = searchParams.get("tab");
+interface ServiceSectionProps {
+  id: string;
+  tab: string;
+}
+
+export const Services: FC<ServiceSectionProps> = ({id, tab}) => {
 
   const activeTab = SERVICES_DATA.find((item) => item.id === id);
   const activeTabContent = activeTab?.childrens?.find(
@@ -34,15 +35,6 @@ const Services = () => {
           {...(activeTabDetails.image ? { image: activeTabDetails.image } : activeTabDetails.video ? { video: activeTabDetails.video } : { child: activeTabDetails.child })}
         />
       )}
-      {!activeTabContent && !activeTabDetails && (
-        <ServiceContent
-          title={SERVICES_DATA[0].childrens ? SERVICES_DATA[0].childrens[0].details.title : SERVICES_DATA[0].details.title}
-          description={SERVICES_DATA[0].childrens ? SERVICES_DATA[0].childrens[0].details.description : SERVICES_DATA[0].details.description}
-          {...(SERVICES_DATA[0].childrens ? SERVICES_DATA[0].childrens[0].details.image ? { image: SERVICES_DATA[0].childrens[0].details.image } : SERVICES_DATA[0].childrens[0].details.video ? { video: SERVICES_DATA[0].childrens[0].details.video } : { child: SERVICES_DATA[0].childrens[0].details.child } : SERVICES_DATA[0].details.image ? { image: SERVICES_DATA[0].details.image } : SERVICES_DATA[0].details.video ? { video: SERVICES_DATA[0].details.video } : { child: SERVICES_DATA[0].details.child })}
-        />
-      )}
     </div>
   );
 };
-
-export default Services;
