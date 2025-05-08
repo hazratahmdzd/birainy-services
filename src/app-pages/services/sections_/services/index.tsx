@@ -4,7 +4,7 @@ import { ServiceAccordion, ServiceContent } from "@/components";
 import { useSearchParams } from "next/navigation";
 import { SERVICES_DATA } from "@/config/constants";
 
-export const Services = () => {
+const Services = () => {
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
   const tab = searchParams.get("tab");
@@ -44,3 +44,5 @@ export const Services = () => {
     </div>
   );
 };
+
+export default Services;

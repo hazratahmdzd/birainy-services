@@ -1,5 +1,9 @@
-'use client';
-import { Head, Services } from "./sections_";
+import { Head } from "./sections_";
+import dynamic from "next/dynamic";
+
+const Services = dynamic(() => import("./sections_/services/index"), {
+  ssr: false,
+});
 
 export const ServicesPage = () => {
   return (
