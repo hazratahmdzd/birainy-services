@@ -3,8 +3,8 @@ import { ServiceAccordion, ServiceContent } from "@/components";
 import { SERVICES_DATA } from "@/config/constants";
 
 interface ServiceSectionProps {
-  id: string;
-  tab: string;
+  id: string | string[];
+  tab: string | string[];
 }
 
 export const Services: FC<ServiceSectionProps> = ({id, tab}) => {

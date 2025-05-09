@@ -5,7 +5,13 @@ import { Header, Footer } from "./(widgets)";
 
 export const metadata: Metadata = {
   title: "BIRainy | Data analitikası, tətbiqlərin hazırlanması",
-  description: "BIRainy - Data analitikası, tətbiqlərin hazırlanması, veb saytların hazırlanması, mobil tətbiqlərin hazırlanması",
+  description:
+    "BIRainy - Data analitikası, tətbiqlərin hazırlanması, veb saytların hazırlanması, mobil tətbiqlərin hazırlanması",
+  icons: {
+    icon: "/favicon.svg",
+    shortcut: "/favicon.svg",
+    apple: "/favicon.svg",
+  }
 };
 
 export default function RootLayout({
