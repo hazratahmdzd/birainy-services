@@ -1,11 +1,12 @@
-"use client";
-import { useSearchParams } from "next/navigation";
+import { FC } from "react";
 import { Head, Services } from "./sections_";
 
-export const ServicesPage = () => {
-  const searchParams = useSearchParams();
-  const id = searchParams.get("id") || "1";
-  const tab = searchParams.get("tab") || "1";
+interface ServicesPageProps {
+  id: string;
+  tab: string;
+}
+
+export const ServicesPage: FC<ServicesPageProps> = ({ id, tab }) => {
   return (
     <>
       <Head />

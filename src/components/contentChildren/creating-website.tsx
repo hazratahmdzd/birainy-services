@@ -19,7 +19,8 @@ const CreatingWebsite = () => {
               src={item.image}
               alt="website photo"
               fill
-              objectFit="cover"
+              sizes="646"
+              className="object-cover"
             />
           </div>
         </div>

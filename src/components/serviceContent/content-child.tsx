@@ -9,7 +9,7 @@ export const ContentChild: FC<ContentChildProps> = ({
 }) => {
   return image ? (
     <div className="w-full aspect-[1232/675] rounded-[12px] overflow-hidden relative">
-      <Image src={image} alt="content image" fill objectFit="cover" />
+      <Image src={image} alt="content image" fill sizes="1000" className="object-cover" />
     </div>
   ) : video ? (
     <div className="w-full aspect-[1232/675] rounded-[12px] overflow-hidden">

@@ -13,7 +13,6 @@ import { cn } from "@/lib/utils";
 
 export const ServiceAccordion = () => {
   const [openItem, setOpenItem] = useState<string | null>(null);
-
   const searchParams = useSearchParams();
   const id = searchParams.get("id");
   const tab = searchParams.get("tab");
