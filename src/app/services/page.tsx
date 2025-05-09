@@ -7,10 +7,13 @@ export const metadata: Metadata = {
     "BIRainy - Analitika, tətbiqlərin hazırlanması, veb saytların hazırlanması, mobil tətbiqlərin hazırlanması",
 };
 
-export default async function Services({ searchParams }: { searchParams: { [key: string]: string | string[] | undefined } }) {
-  const resolvedParams = await searchParams;
-  const id = resolvedParams.id ?? "1";
-  const tab = resolvedParams.tab ?? "1";
+export default async function Services({
+  searchParams,
+}: {
+  searchParams: { [key: string]: string | string[] | undefined };
+}) {
+  const id = searchParams.id ?? "1";
+  const tab = searchParams.tab ?? "1";
 
   return (
     <div>
