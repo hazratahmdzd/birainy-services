@@ -8,7 +8,7 @@ import { FullLogo } from "@/components";
 
 export const Header = () => {
   return (
-    <header className="container-center pt-4 lg:pt-8 flex items-center max-lg:justify-between gap-8">
+    <header className="w-full container-center pt-4 lg:pt-8 flex items-center max-lg:justify-between gap-8">
       <FullLogo />
       <div className="w-full px-7 py-3.5 max-lg:hidden bg-brand-bg rounded-2xl text-base font-(family:) flex items-center gap-4 justify-between">
         <div className="flex items-center gap-4 xl:gap-7">
